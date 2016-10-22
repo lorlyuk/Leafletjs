@@ -1,0 +1,14 @@
+body {
+	background: black;
+	color: grey;
+}
+#mapid { height: 500px;
+width: 1000px;
+ }
+
+.center {
+	margin: 0 auto;
+	text-align: center;
+	padding-left: 5vw;
+	border-radius: 5px;
+}

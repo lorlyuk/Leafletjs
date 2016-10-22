@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+     <link rel="stylesheet" href="css/style.css"/>
+    <title>My map</title>
+</head>
+<body>
+		<div class="center">
+			<h2>Квасилів - Рокитне</h2>
+		 <div id="mapid"></div>
+	</div>
+	 <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+	 <script>
+	 var mymap = L.map('mapid').setView([50.519, 26.242], 7);
+		L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibG9ybHl1ayIsImEiOiJjaXVsMWhhczIwMDA1MnpvMDc0ZTN6ODhwIn0.tUNwl8sF45q9RehnVrTGCw', {
+		    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+		    maxZoom: 18,
+		    id: 'mapbox.satellite',
+		    accessToken: 'pk.eyJ1IjoibG9ybHl1ayIsImEiOiJjaXVsMWhhczIwMDA1MnpvMDc0ZTN6ODhwIn0.tUNwl8sF45q9RehnVrTGCw'
+		}).addTo(mymap);
+	 var marker = L.marker([50.564, 26.2645]).addTo(mymap);
+	 var marker2 = L.marker([51.275222, 27.223878]).addTo(mymap);
+	 				marker2.bindPopup("<b>А тут батьки</b><br>Радянська, 24").openPopup();	
+	 				marker.bindPopup("<b>А саме тут живу я</b><br>Молодіжна, 40").openPopup();			
+	 var circle = L.circle([50.564, 26.2645], {
+		    color: 'red',
+		    fillColor: '#f01',
+		    fillOpacity: 0.2,
+		    radius: 500
+		}).addTo(mymap);
+		circle.bindPopup("Це все Квасилів");
+	 var circle2 = L.circle([51.269222, 27.230278], {
+		    color: 'red',
+		    fillColor: '#f01',
+		    fillOpacity: 0.2,
+		    radius: 1000
+		}).addTo(mymap);
+		circle2.bindPopup("А тут живуть батьки м. Рокитне");
+	 </script>
+</body>
+</html>
