@@ -2,13 +2,16 @@ body {
 	background: black;
 	color: grey;
 }
-#mapid { height: 500px;
-width: 1000px;
+
+#mapid { 
+	height: 500px;
+	width: 80vw;
+	margin-left: 10vw;
  }
 
 .center {
 	margin: 0 auto;
 	text-align: center;
-	padding-left: 5vw;
-	border-radius: 5px;
+	
 }
+	
